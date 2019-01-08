@@ -103,6 +103,7 @@
 		A8E7666C21E33E5B00B729C1 /* BTC Conversion */ = {
 			isa = PBXGroup;
 			children = (
+				A8E7668721E3439700B729C1 /* View Models */,
 				A8E7668621E3437F00B729C1 /* Utilities */,
 				A8E7668521E3437700B729C1 /* Extensions */,
 				A8E7668421E3434400B729C1 /* Resources */,
@@ -187,6 +188,13 @@
 				A8E7668821E3526000B729C1 /* Managers */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A8E7668721E3439700B729C1 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		A8E7668821E3526000B729C1 /* Managers */ = {
