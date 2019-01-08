@@ -16,7 +16,6 @@ class SelectCurrencyVC: UIViewController {
     private var filteredCurrencyList = [Currency]()
     
     // MARK: - IBOutlets
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var currencyTableView: UITableView!
     @IBOutlet weak var currencySearchBar: UISearchBar!
     
@@ -39,7 +38,7 @@ class SelectCurrencyVC: UIViewController {
         }
     }
     
-    // MARK: - Methods
+    // MARK: - Functions
     private func dismissKeyboard() {
         if self.currencySearchBar.isFirstResponder{
             self.currencySearchBar.resignFirstResponder()
@@ -47,7 +46,8 @@ class SelectCurrencyVC: UIViewController {
     }
     
     private func configureViews(){
-        titleLabel.text = "Hello\n\n\(dataManager.getUserName())"
+        title = "\(dataManager.getUserName())"
+        currencyTableView.register(UINib(nibName: "CurrencyTVC", bundle: nil), forCellReuseIdentifier: "CurrencyTVC")
     }
     
     private func populateCurrencyList(){
@@ -94,9 +94,10 @@ extension SelectCurrencyVC:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyCell", for: indexPath)
-        cell.textLabel?.text = filteredCurrencyList[indexPath.row].name
-        cell.detailTextLabel?.text = filteredCurrencyList[indexPath.row].code
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CurrencyTVC", for: indexPath) as! CurrencyTVC
+        cell.configCell(currency: filteredCurrencyList[indexPath.row])
+//        cell.textLabel?.text = filteredCurrencyList[indexPath.row].name
+//        cell.detailTextLabel?.text = filteredCurrencyList[indexPath.row].code
         return cell
     }
     
@@ -104,6 +105,9 @@ extension SelectCurrencyVC:UITableViewDelegate,UITableViewDataSource{
         let selectedCurrency = filteredCurrencyList[indexPath.row]
         self.selectedCurrency = selectedCurrency
         performConversion(selectedCurrency: selectedCurrency)
+    }
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40.0
     }
 }
 

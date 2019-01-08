@@ -23,6 +23,8 @@
 		A8E7669E21E391CC00B729C1 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E7669D21E391CC00B729C1 /* Conversion.swift */; };
 		A8E766A221E3A47300B729C1 /* ProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E766A121E3A47300B729C1 /* ProgressHud.swift */; };
 		A8E766A821E3ABAB00B729C1 /* ConversionDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E766A721E3ABAB00B729C1 /* ConversionDetailsVC.swift */; };
+		A8FA353021E4C07C00E412E9 /* CurrencyTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA352E21E4C07C00E412E9 /* CurrencyTVC.swift */; };
+		A8FA353121E4C07C00E412E9 /* CurrencyTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8FA352F21E4C07C00E412E9 /* CurrencyTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		A8E7669D21E391CC00B729C1 /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
 		A8E766A121E3A47300B729C1 /* ProgressHud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHud.swift; sourceTree = "<group>"; };
 		A8E766A721E3ABAB00B729C1 /* ConversionDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionDetailsVC.swift; sourceTree = "<group>"; };
+		A8FA352E21E4C07C00E412E9 /* CurrencyTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTVC.swift; sourceTree = "<group>"; };
+		A8FA352F21E4C07C00E412E9 /* CurrencyTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 				A8E7668521E3437700B729C1 /* Extensions */,
 				A8E7668421E3434400B729C1 /* Resources */,
 				A8E7668321E3431D00B729C1 /* Controllers */,
+				A8E7668221E3431700B729C1 /* Views */,
 				A8E7668121E3430E00B729C1 /* Models */,
 				A8E7668021E3430600B729C1 /* Storyboards */,
 				A8E7667F21E342F900B729C1 /* Application */,
@@ -136,6 +141,15 @@
 				A8E7669D21E391CC00B729C1 /* Conversion.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A8E7668221E3431700B729C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A8FA352E21E4C07C00E412E9 /* CurrencyTVC.swift */,
+				A8FA352F21E4C07C00E412E9 /* CurrencyTVC.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		A8E7668321E3431D00B729C1 /* Controllers */ = {
@@ -253,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8FA353121E4C07C00E412E9 /* CurrencyTVC.xib in Resources */,
 				A8E7667821E33E5E00B729C1 /* LaunchScreen.storyboard in Resources */,
 				A8E7667521E33E5E00B729C1 /* Assets.xcassets in Resources */,
 				A8E7667321E33E5B00B729C1 /* Main.storyboard in Resources */,
@@ -313,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8FA353021E4C07C00E412E9 /* CurrencyTVC.swift in Sources */,
 				A8E7668E21E357A000B729C1 /* UIVIewController+Extension.swift in Sources */,
 				A8E7669E21E391CC00B729C1 /* Conversion.swift in Sources */,
 				A8E7667021E33E5B00B729C1 /* IntroductionVC.swift in Sources */,
@@ -474,7 +490,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/BTC Conversion/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,7 +511,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/BTC Conversion/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

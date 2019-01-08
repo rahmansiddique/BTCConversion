@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrencyTVC" rowHeight="80" id="KGk-i7-Jjw" customClass="CurrencyTVC" customModule="BTC_Conversion" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="48.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOX-j9-ACV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="48.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US Dollar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEh-Fk-Dti">
+                                <rect key="frame" x="10" y="13" width="82" height="22.5"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGc-QQ-Eoe">
+                                <rect key="frame" x="301" y="14.5" width="9" height="20"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="18"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GEh-Fk-Dti" firstAttribute="centerY" secondItem="jOX-j9-ACV" secondAttribute="centerY" id="Qcl-mY-0fQ"/>
+                            <constraint firstItem="GGc-QQ-Eoe" firstAttribute="centerY" secondItem="GEh-Fk-Dti" secondAttribute="centerY" id="Z4U-ko-A6T"/>
+                            <constraint firstAttribute="trailing" secondItem="GGc-QQ-Eoe" secondAttribute="trailing" constant="10" id="leX-ip-Ibw"/>
+                            <constraint firstItem="GEh-Fk-Dti" firstAttribute="leading" secondItem="jOX-j9-ACV" secondAttribute="leading" constant="10" id="qhc-eH-nGq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jOX-j9-ACV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7sO-9Q-Z99"/>
+                    <constraint firstItem="jOX-j9-ACV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="APd-qM-NYF"/>
+                    <constraint firstAttribute="trailing" secondItem="jOX-j9-ACV" secondAttribute="trailing" id="nrD-r1-dr4"/>
+                    <constraint firstAttribute="bottom" secondItem="jOX-j9-ACV" secondAttribute="bottom" id="ybg-0a-Ev1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="codeLabel" destination="GGc-QQ-Eoe" id="JZF-Cc-aWn"/>
+                <outlet property="nameLabel" destination="GEh-Fk-Dti" id="nbd-Jx-2Wy"/>
+            </connections>
+            <point key="canvasLocation" x="132.80000000000001" y="162.3688155922039"/>
+        </tableViewCell>
+    </objects>
+</document>

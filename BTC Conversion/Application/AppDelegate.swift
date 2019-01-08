@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Move to currency VC
         moveToCurrencyVC()
+        
         return true
     }
 
@@ -59,7 +60,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func popDetailsVC(){
-        guard let rootNC = window?.rootViewController as? UINavigationController else {return}
+   
+        guard let rootNC = window?.rootViewController as? UINavigationController else {
+            return
+        }
         rootNC.popToRootViewController(animated: false)
     }
     
